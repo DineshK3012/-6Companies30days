@@ -3,8 +3,8 @@
 ## Approach
 Just find the average of all the neighbouring cells for every cell including it, and place it in the output.
 
-- **Time Complexity:** O(n * m * 9)
-- **Space Complexity:** O(n*m)
+- **Time Complexity:** $O(n * m * 9)$
+- **Space Complexity:** $O(n*m)$
 
 
 ```java

@@ -3,8 +3,8 @@
 ## Approach (Using Queue)
 Just follow the simulation or the process given in the problem description.
 
-- **Time Complexity:** O(n * k)
-- **Space Complexity:** O(n)
+- **Time Complexity:** $O(n * k)$
+- **Space Complexity:** $O(n)$
 
 
 ```java

@@ -3,8 +3,8 @@
 ## Approach -> (DP MEMOIZATION):
 Memoizing the whole needs array using a map which stores the minimum cost to fulfil those needs.
 
-- **Time Complexity:** O()
-- **Space Complexity:** O()
+- **Time Complexity:** $O(N * specialOffers * needsValueRange^N)$, where N is length of Needs
+- **Space Complexity:** $O(needsValueRange^N)$
   
 
 ```cpp

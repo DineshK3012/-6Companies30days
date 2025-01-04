@@ -3,8 +3,8 @@
 ## Approach:
 Find the nearest point on the rectangle which is closer to the circle and check if the distance between that point and circle center is smaller than the radius of the circle or not, if yes then overlapping otherwise not overlappaing
 
-- **Time Complexity:** O(1)
-- **Space Complexity:** O(1)
+- **Time Complexity:** $O(1)$
+- **Space Complexity:** $O(1)$
 
 
 ```java

@@ -2,8 +2,8 @@
 
 ## Approach 1: Sorting the array
 
-- **Time Complexity:** O(nlogn)
-- **Space Complexity:** O(n)
+- **Time Complexity:** $O(nlogn)$
+- **Space Complexity:** $O(n)$
 
 ```cpp
 class Solution {
@@ -32,8 +32,8 @@ public:
 ## Approach 2: Counting Sort / Frequncy Array
 Use the frequency array to get the sorted numbers because the maximum value of an element is upto 5000 only
 
-- **Time Complexity:** O(n + 5001) => O(n), for storing the frequencies of elements
-- **Space Complexity:** O(5001) => O(1), constant space
+- **Time Complexity:** $O(n + 5001) => O(n)$, for storing the frequencies of elements
+- **Space Complexity:** $O(5001) => O(1)$, constant space
 
 
 ```cpp

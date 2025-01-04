@@ -3,8 +3,8 @@
 ## Approach (Dynamic Programming)
 Using Optimized Longest Increasing Subsequence. First sort the envelopes in increasing order of width and decreasing order of height. Then, find the LIS of the heights of the envelopes.
 
-- **Time Complexity:** O(n*logn)
-- **Space Complexity:** O(n)
+- **Time Complexity:** $O(n*logn)$
+- **Space Complexity:** $O(n)$
 
 
 ```cpp
