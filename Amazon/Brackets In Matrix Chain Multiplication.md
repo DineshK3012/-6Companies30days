@@ -1,4 +1,4 @@
-# Brackets In Matrix Chain Multiplication
+# [Brackets In Matrix Chain Multiplication](https://www.geeksforgeeks.org/problems/brackets-in-matrix-chain-multiplication1024/1)
 
 ## Approach (Using Dynamic Programming)
 Using memoization approach, creating an dp array of pair(string, int) of dimension `n*n`.
