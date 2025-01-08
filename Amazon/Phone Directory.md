@@ -1,10 +1,9 @@
-# Phone directory
+# [Phone directory](https://www.geeksforgeeks.org/problems/phone-directory4628/1)
 
-## Approach (Brute Force)
+## Approach 1 (Brute Force)
 
 - **Time Complexity:** $O(|s|*n*max|s|)$
 - **Space Complexity:** $O(n)$, ignoring the output space
-
 
 ```cpp
 class Solution {
@@ -45,5 +44,74 @@ public:
 
         return ans;
     }
+};
+```
+
+--- 
+
+## Approach 2 (Using Trie)
+
+- **Time Complexity:** $O(m*n*logn + m*n*L)$, where `m` is `|S|` and `L` is `max|contact[i]|`
+- **Space Complexity:** $O(n * L)$, used in creating trie, ignoring the output space
+
+```cpp
+class Solution {
+private:
+    struct TrieNode{
+        unordered_map<char, TrieNode*> child;
+        vector<string> list;
+    };
+    
+    TrieNode* root;
+    
+    void insert(string s){
+        TrieNode* t = root;
+        for(char c: s){
+            if(t->child[c] == NULL){
+                t->child[c] = new TrieNode();
+            }
+            
+            t = t->child[c];
+            t->list.push_back(s);
+        }
+    }
+    
+    vector<string> getWords(string prefix){
+        TrieNode* t = root;
+        vector<string> empty;
+        for(char c: prefix){
+            if(t->child[c] == NULL){
+                return empty;
+            }
+            
+            t = t->child[c];
+        }
+        
+        return t->list;
+    }
+    
+public:
+    vector<vector<string>> displayContacts(int n, string contact[], string s) {
+        root = new TrieNode();
+        for (int i = 0; i < n; i++) {
+            insert(contact[i]);
+        }
+        
+        vector<vector<string>> ans(s.length()); // Initialize ans with s.length() empty vectors
+        for (int i = 0; i < s.length(); i++) {
+            vector<string> list = getWords(s.substr(0, i + 1));
+            sort(list.begin(), list.end());
+            list.erase(unique(list.begin(), list.end()), list.end());
+            
+            if (list.size() == 0) {
+                list.push_back("0");
+            }
+            
+            ans[i] = list; // Assign list directly to ans[i]
+        }
+        
+        return ans;
+    }
+
 };
 ```
