@@ -1,4 +1,4 @@
-# Amount of Time for Binary Tree to Be Infected
+# [Amount of Time for Binary Tree to Be Infected](https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/)
 
 ## Approach (Using BFS & DFS):
 - First apply dfs to traverse over all the nodes, to find the parent of each node and to find the node for the start. 
